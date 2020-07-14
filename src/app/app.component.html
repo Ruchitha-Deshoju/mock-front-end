@@ -1,0 +1,41 @@
+
+<header>
+<div class="innter-width">
+  <a href="#" class="logo">Interview.io</a>
+  <i class="menu-toggle-btn fas fa-bars"></i>
+  <nav class="navigation-menu">
+    
+      <span role="presentation" 
+      routerLinkActive="active" 
+      [routerLinkActiveOptions]="{exact:true}">    
+      <a routerLink="home" *ngIf="isallowed()">Home</a></span>
+      <span role="presentation" routerLinkActive="active" *ngIf="!isallowed()"><a routerLink="/">Login</a></span>
+      <span role="presentation" routerLinkActive="active" *ngIf="isallowed()" ><a routerLink="dashboard/2" >dashboard</a></span>
+      <span role="presentation" routerLinkActive="active" *ngIf="isallowed()"><a routerLink="chatgroups" >Chat-Groups</a></span>
+      <span role="presentation" routerLinkActive="active" *ngIf="isallowed()"><a routerLink="blog" >Blog</a></span>
+      <li class="nav-item dropdown">
+        <span class="nav-link dropdown-toggle" class="user" data-toggle="dropdown" role="presentation" routerLinkActive="active" *ngIf="isallowed()" aria-haspopup="true" aria-expanded="false"><a>User</a></span>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="user" style="color:black">Update</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#" style="color:black;">Logout</a>
+        </div>
+      </li>
+
+  </nav>
+</div>
+
+</header>
+
+<router-outlet></router-outlet>
+<router-outlet></router-outlet>
+<router-outlet></router-outlet>
+<router-outlet></router-outlet>
+
+
+
+
+
+
+
+  

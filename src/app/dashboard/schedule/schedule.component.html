@@ -1,0 +1,129 @@
+
+<div class="container-fluid">
+    <div class="text">
+        Practice makes perfect
+    </div>
+    <div class="row">
+        <button type="button" class="btn btn-warning btn-lg" data-toggle="modal" data-target="#exampleModalCenter" style="margin: auto;">
+            Interview With Experts
+        </button>
+    </div>
+</div>
+<div class="container-fluid">
+    <!-- <h1 class="tit">HOW IT WORKS</h1> -->
+    <div class="tit">
+        <p>HOW IT WORKS</p>
+        <div class="border"></div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-4 col">
+            <div class="row how-img">
+                <img src="https://interviewbuddy.in/images/tree2.png" alt="">
+            </div>
+            <div class="row how-title" style="padding: 0 143px;">
+                <p>Complete your profile</p>
+            </div>
+            <div class="row how-text" style="padding: 8px 74px">
+                <p>Complete your profile before scheduling an interview so your personal expert(s) can thoroughly analyse your profile</p>
+            </div>
+            
+        </div>
+        <div class="col-md-4 col">
+            <div class="row how-img" >
+                <img src="https://interviewbuddy.in/images/tree3.png" alt="">
+            </div>
+            <div class="row how-title" style="padding: 0 80px">
+                <p>Schedule a ONE-ON-ONE Interview with Expert</p>
+            </div>
+            <div class="row how-text" style="padding: 8px 51px">
+                <p>Choose an available slot that fits your schedule & get a confirmation via e-mail & SMS. Prime your interview skills with our curated Resources & you are all set to face your mock interview!</p>
+            </div>
+            
+        </div>
+        <div class="col-md-4 col">
+            <div class="row how-img" >
+                <img src="https://interviewbuddy.in/images/tree4.png" alt="">
+            </div>
+            <div class="row how-title" style="padding: 0 121px">
+                <p>Get Performance Feedback</p>
+            </div>
+            <div class="row how-text" style="padding:8px 66px">
+                <p>Get comprehensive feedback on your performance & an interview scorecard underlining your strengths, personalized tips on improving weaker areas & a link to the recording of your interview.</p>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #d523d8;">
+          <h5 class="modal-title" id="exampleModalLongTitle" class="head">{{ title }}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" >
+           <div class="row" *ngIf="display_one">
+               <div class="col-md-6">
+                   <p>
+                    <button type="button" class="button" (click)="switchText(1)">Frontend</button>
+                   </p>
+                   <p>
+                    <button type="button" class="button" (click)="switchText(2)">Backend</button>
+                   </p>
+                   <p>
+                    <button type="button" class="button" (click)="switchText(3)">Behavioural</button>
+                   </p>
+            
+               </div>
+               <div class="col-md-6">
+                    <p>
+                    <button type="button" class="button" (click)="switchText(4)">System Design</button>
+                   </p>
+                   <p>
+                    <button type="button" class="button" (click)="switchText(5)">Data Structures and Algorithms</button>
+                   </p>
+                   <p>
+                    <button type="button" class="button" (click)="switchText(6)">Applied Data Science</button>
+                   </p>
+             </div>
+           </div>
+           <div  *ngIf="display_two">
+               <div class="row" *ngFor="let item of interview_list; let i = index">
+                   <div class="col-md-6">
+                       <p class="square_btn">
+                           {{ item.name }}
+                       </p>
+                   </div>
+                   <div class="col-md-6">
+                        <button type="button" class="inter" (click)="sendData(item.name, item.mentor)"> Take Interview Now</button>
+                   </div>
+               </div>
+           </div>
+           <div *ngIf="display_three" class="container">
+               <div class="row">
+                   <div  class="final">
+                        You have successfully placed an interview with<br>
+                            <span>{{mentor_name}}</span><br>
+                        You will soon receive timings to your email
+                   </div>
+                    
+               </div>
+           </div>
+           <hr>
+            <div class="row change-text">
+                {{text}}
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="goBack()" [disabled]="display_one">{{ button_one }}</button>
+          <button type="button" class="btn btn-primary" (click)="goNext()" [disabled]="display_two" >{{ button_two }}</button>
+        </div>
+      </div>
+    </div>
+</div>
+
+ 

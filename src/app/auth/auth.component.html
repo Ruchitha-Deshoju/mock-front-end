@@ -1,0 +1,66 @@
+        <div class="container-fluid">
+            <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="">
+        </div>
+        <div class="container" style="margin-top: 122px; ">
+    
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+                            <form (ngSubmit)="onSubmit()" #f="ngForm">
+                                    <div 
+                                    id="user-data"
+                                    ngModelGroup="userData"
+                                    #userData="ngModelGroup">
+                                    <div class="form-group" *ngIf="!isLoginMode">
+                                        <label for="username">Username</label>
+                                        <input 
+                                        type="text"
+                                        id="username"
+                                        class="form-control"
+                                        ngModel
+                                        name="username"
+                                        required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Mail</label>
+                                        <input 
+                                        type="email"
+                                        id="email"
+                                        class="form-control"
+                                        ngModel
+                                        name="email"
+                                        required
+                                        email
+                                        #email="ngModel">
+                                        <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid eamil id</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="password">Password</label>
+                                        <input
+                                        type="password"
+                                        id="email"
+                                        class="form-control"
+                                        ngModel
+                                        name="password"
+                                        required
+                                        minlength="7">
+                                    </div>
+                                </div>
+                                <p *ngIf="!userData.valid && userData.touched">User Data is invalid!</p>
+                                <div>
+                                    <button
+                                    class="btn btn-primary"
+                                    type="submit"
+                                    [disabled]="!f.valid">{{ isLoginMode ? 'Login' : 'Sign Up' }}</button>
+                                    |
+                                    <button 
+                                    class="btn btn-primary"
+                                    (click)="onSwitchMode()"
+                                    type="button">Switch to {{ isLoginMode ? 'Sign Up' : 'Login' }}</button>
+                                </div>
+                        </form>                
+                    </div>
+                </div>
+            </div>
+
+
+

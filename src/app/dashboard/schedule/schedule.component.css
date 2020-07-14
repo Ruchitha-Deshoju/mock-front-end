@@ -1,0 +1,118 @@
+.fade.show {
+    opacity: 1;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.text {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 3.8;
+    margin-top: 44px;
+}
+.modal-content {
+    position: absolute;
+    top: 209px;
+}
+
+.tit {
+    margin-top: 50px;
+    margin-bottom: 22px;
+    text-align: center;
+    margin-left: 20px;
+    font-size: 26px;
+}
+.how-title {
+    font-size: 21px;
+    padding: 0px;
+    /* margin-left: 69px; */
+    text-align: center;
+}
+.how-text {
+    /* margin-left: 11px; */
+    text-align: center;
+}
+
+.border {
+    width: 266px;
+    height: 5px;
+    background: #6ab04c;
+    margin: 15px auto;
+}
+
+.button {
+    width: 195px;
+    height: 49px;
+    margin-bottom: 5px;
+    background: none;
+    border: 4px solid;
+    color: #3498db;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.head {
+    padding-top: 30px;
+    text-align: center;
+    margin-left: 106px;
+    padding-bottom: 13px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.model-header {
+    background-color: #d523d8;
+    font-size: 21px;
+    color: #271010;
+}
+
+.change-text {
+    padding-left: 34px;
+    padding-right: 71px;
+    text-align: center;
+    padding-bottom: 28px;
+}
+ .modal-body {
+    position: relative;
+    padding: 10px;
+    top: 12px;
+    margin-left: 17px;
+    margin-bottom: -10px;
+    margin-right: -4px
+}
+.inter {
+    border: none;
+    width: 153px;
+    height: 31px;
+    /* border-radius: 20px; */
+    background-color: #d3c414ad;
+}
+
+.square_btn {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #FFF;
+    width: 140px;
+    background: #1ec7bb;
+    transition: .4s;
+    text-align: center;
+    margin-left: 7px;
+  }
+
+  .final {
+    text-align: center;
+    margin-left: 32px;
+    font-size: 19px;
+}
+
+.how-img {
+    margin-left: 146px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}

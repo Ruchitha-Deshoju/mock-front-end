@@ -1,0 +1,34 @@
+
+.square_btn {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    color: #FFF;
+    background: #1ec7bb;
+    transition: .4s;
+    border-radius: 22px;
+    margin-left: 7px;
+  }
+
+
+  .border {
+    width: 293px;
+    height: 5px;
+    background: #6ab04c;
+    margin: -4px auto;
+}
+
+.tit {
+  margin-top: 50px;
+  margin-bottom: 22px;
+  text-align: center;
+  margin-left: 20px;
+  font-size: 26px;
+}
+
+.name {
+  text-align: center;
+    font-size: 19px;
+}

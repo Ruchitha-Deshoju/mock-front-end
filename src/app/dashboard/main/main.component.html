@@ -1,0 +1,44 @@
+<div class="container-fluid">
+    <div class="row">
+        <button type="button" class="btn btn-warning btn-lg" (click)="takeTo()" style="margin-top: 48px;
+        /* margin: auto; */
+        margin-left: 50px;">
+            Take Preactce Interview
+        </button>
+    </div>
+</div>
+<!-- 
+<div class="container-fluid">
+    <div class="row" *ngFor="let task of user_tasks; let i = index">
+        <div class="col-md-8">
+            <p>
+                {{ task.mentor_name }}
+            </p>
+            <span class="square_btn">{{task.interview_type }}</span>
+        </div>
+    </div>
+</div> -->
+
+<div class="container-fluid">
+    <div class="tit">
+        <p>Your Practice Interviews</p>
+        <div class="border"></div>
+    </div>
+</div>
+<div class="container-fluid" style="margin-top: 50px;">
+
+
+<div class="row" *ngFor="let task of user_tasks; let i = index" >
+
+    <div class="col-md-8 name">
+        <p>
+            {{ task.mentor_name }}
+        </p>
+        
+    </div>
+    <div class="col-md-4">
+        <span class="square_btn">{{task.interview_type }}</span>
+    </div>
+</div>
+
+</div>
